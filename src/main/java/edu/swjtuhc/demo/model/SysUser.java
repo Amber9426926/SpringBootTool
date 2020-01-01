@@ -1,45 +1,61 @@
 package edu.swjtuhc.demo.model;
 
+import java.util.Date;
+
 public class SysUser {
-	private String username;
-	private String password;
-	private String name;
-	private int age;
-	private String gender;
-	public String getUsername() {
-		return username;
+	private int uID;
+	private String uName;
+	private String uPwd;
+	private String nuPwd;
+	private String uSex;
+	private String uPhone;
+	private Date uRegTime;
+	public int getuID() {
+		return uID;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setuID(int uID) {
+		this.uID = uID;
 	}
-	public String getPassword() {
-		return password;
+	public String getuName() {
+		return uName;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setuName(String uName) {
+		this.uName = uName;
 	}
-	public String getName() {
-		return name;
+	public String getuPwd() {
+		return uPwd;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setuPwd(String uPwd) {
+		this.uPwd = uPwd;
 	}
-	public int getAge() {
-		return age;
+	public String getNuPwd() {
+		return nuPwd;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setNuPwd(String nuPwd) {
+		this.nuPwd = nuPwd;
 	}
-	public String getGender() {
-		return gender;
+	public String getuSex() {
+		return uSex;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setuSex(String uSex) {
+		this.uSex = uSex;
+	}
+	public String getuPhone() {
+		return uPhone;
+	}
+	public void setuPhone(String uPhone) {
+		this.uPhone = uPhone;
+	}
+	public Date getuRegTime() {
+		return uRegTime;
+	}
+	public void setuRegTime(Date uRegTime) {
+		this.uRegTime = uRegTime;
 	}
 	@Override
 	public String toString() {
-		return "SysUser [username=" + username + ", password=" + password + ", name=" + name + ", age=" + age
-				+ ", gender=" + gender + "]";
+		return "SysUser [uID=" + uID + ", uName=" + uName + ", uPwd=" + uPwd + ", nuPwd=" + nuPwd + ", uSex=" + uSex
+				+ ", uPhone=" + uPhone + ", uRegTime=" + uRegTime + "]";
 	}
 	
 }

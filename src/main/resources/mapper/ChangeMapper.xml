@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjtuhc.demo.mapper.ChangeMapper">
+<update id="ChangeuPwd" parameterType = "edu.swjtuhc.demo.model.ChangeModel" >
+		update user 
+			<set>
+			<if test="uName !=null">
+			uName = #{uName}
+			</if>
+			<if test="uPwd !=null">
+			uPwd = #{uPwd}
+			</if>
+			<if test="NuPwd !=null">
+			uPwd = #{uPwd}
+			</if>
+			</set>
+		where uName = #{uName}
+	</update>
+</mapper>
