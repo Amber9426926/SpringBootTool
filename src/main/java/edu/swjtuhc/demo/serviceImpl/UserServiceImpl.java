@@ -40,15 +40,26 @@ public class UserServiceImpl implements UserService{
 	}
 	public int update(SysUser user) {
 		//TODO Auto-generated method stub
-		SysUser user2 = userMapper.selectuserByuPwd(user.getuName());
-		SysUser user3 = userMapper.selectuserByuPwd(user.getuPwd());
+		SysUser user2 = userMapper.selectuserByuName(user.getuName());
+		
 		int i = -1;
-		if(user2!=null&&user3!=null) {
-				user.setuPwd(user.getNuPwd());
-				return userMapper.updateuserByuPwd(user);
+		if(user2!=null) {
+				i= userMapper.updateuserByuPwd(user);
 		}else {
 			i=2;
 		}
+		return i;
+	}
+	public int delete(SysUser user) {
+		//TODO Auto-generated method stub
+		SysUser user2 = userMapper.selectuserByuName(user.getuName());
+		int i =-1;
+		if(user2!=null) {
+			i =userMapper.deleteuserByuName(user);
+	}else {
+		i=2;
+	}
+		
 		return i;
 	}
 }

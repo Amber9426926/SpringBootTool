@@ -27,7 +27,9 @@
 	<update id="updateuserByuPwd" parameterType = "edu.swjtuhc.demo.model.SysUser" >
 		update user
 		set uPwd = #{uPwd}
-		where uName = #{uName} and
-		uPwd = #{uPwd}
+		where uName = #{uName} 
 	</update>
+	<delete id="deleteuserByuName" parameterType = "edu.swjtuhc.demo.model.SysUser">
+		delete from user where uName = #{uName} 
+	</delete>
 </mapper>

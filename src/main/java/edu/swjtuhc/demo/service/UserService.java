@@ -6,4 +6,5 @@ public interface UserService {
 	public int register(SysUser user);
 	public int login(SysUser user);
 	public int update(SysUser user);
+	public int delete(SysUser user);
 }

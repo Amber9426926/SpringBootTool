@@ -14,6 +14,20 @@
 	<select id="selectAllCommodity" resultMap="Commodity_result">
 		select * from commodity
 	</select>
-
-
+	<insert id="insertCommodity" parameterType="edu.swjtuhc.demo.model.Commodity">
+		insert into commodity
+		(Type,Name,Price,Num,Add_time,Photo)
+		values
+		(#{Type},#{Name},#{Price},#{Num},#{Add_time},#{Photo})
+	</insert>
+	<select id="selectcommodityByName"   resultMap="Commodity_result" >
+		select * from commodity
+		where
+		Name = #{Name}
+	</select>
+	<update id="updatecommodityByName" parameterType = "edu.swjtuhc.demo.model.Commodity" >
+		update commodity
+		set Type=#{Type},Price=#{Price},Num= #{Num},Photo= #{Photo}
+		where Name = #{Name} 
+	</update>
 </mapper>

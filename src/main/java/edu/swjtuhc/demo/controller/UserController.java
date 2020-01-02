@@ -44,4 +44,13 @@ public class UserController {
 		result.put("state",i);
 		return result;
 	}
+	@RequestMapping("/delete")
+	public JSONObject delete(@RequestBody SysUser user) {
+		JSONObject result = new JSONObject();
+		
+		int i = userService.delete(user);
+		
+		result.put("state",i);
+		return result;
+	}
 }

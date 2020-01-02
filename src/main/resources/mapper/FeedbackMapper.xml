@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjtuhc.demo.mapper.FeedbackMapper">
+<resultMap type="edu.swjtuhc.demo.model.Feedback" id="SelectUser_result">
+		<id column="f_id" property="f_id" javaType="java.lang.Integer"  jdbcType="INTEGER"/>
+		<result column="uName" property="uName" javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result column="information" property="information" javaType="java.lang.String" jdbcType="VARCHAR" />
+	</resultMap >
+	
+	<select id="selectAllFeedback" resultMap="SelectUser_result">
+		select * from feedback
+	</select>
+
+<select id="selectfeedbackByuName"  parameterType = "java.lang.String" resultType="edu.swjtuhc.demo.model.Feedback">
+		select * from feedback
+		where
+		uName = #{uName}
+	</select>
+	<insert id="insertFeedback" parameterType = "edu.swjtuhc.demo.model.Feedback">
+	insert into feedback
+	(uName,information)
+	values
+	(#{uName},#{information})
+	</insert>
+	<update id="updateFeedbackByuName" parameterType = "edu.swjtuhc.demo.model.Feedback" >
+		update feedback
+		set information = #{information}
+		where uName = #{uName} 
+	</update>
+	<delete id="deleteFeedbackByuName" parameterType = "edu.swjtuhc.demo.model.Feedback">
+		delete from feedback where uName = #{uName} 
+	</delete>
+</mapper>

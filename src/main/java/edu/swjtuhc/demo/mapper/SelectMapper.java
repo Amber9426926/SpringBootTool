@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import edu.swjtuhc.demo.model.Commodity;
+
 import edu.swjtuhc.demo.model.SysUser;
 
 @Mapper

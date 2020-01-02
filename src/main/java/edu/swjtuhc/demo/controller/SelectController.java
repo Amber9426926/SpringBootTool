@@ -20,4 +20,5 @@ public class SelectController {
 	public List<SysUser> getList(){
 		return selectService.getSelectList();
 	}
+	
 }

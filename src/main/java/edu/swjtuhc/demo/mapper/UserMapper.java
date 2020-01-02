@@ -13,5 +13,6 @@ public interface UserMapper {
 	public SysUser selectuserByuPwd(String uPwd);
 	public int insertLogin(SysUser user);
 	public int updateuserByuPwd(SysUser user);
+	public int deleteuserByuName(SysUser user);
 	
 }
